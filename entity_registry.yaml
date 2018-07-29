@@ -1,0 +1,15 @@
+media_player.bedroom:
+  config_entry_id:
+  name:
+  platform: sonos
+  unique_id: RINCON_949F3E74A84E01400
+media_player.kitchen:
+  config_entry_id:
+  name:
+  platform: sonos
+  unique_id: RINCON_949F3E74A7CE01400
+media_player.livingroom:
+  config_entry_id:
+  name:
+  platform: sonos
+  unique_id: RINCON_949F3EE24C6A01400
