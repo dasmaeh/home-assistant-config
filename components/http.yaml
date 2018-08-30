@@ -13,8 +13,6 @@ http:
   # Certificates (managed by letsenrypt addon)
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-  # Set SSL Profile to intermediate as Firefox 61 has problems with modern
-  ssl_profile: intermediate
   # Trust clients from my local networks:
   trusted_networks: !secret ha_trusted_networks
   # Ban clients after 3 failed login attempts:
