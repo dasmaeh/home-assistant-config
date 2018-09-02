@@ -1,0 +1,12 @@
+---
+# The sonos component allows you to control your Sonos HiFi wireless speakers
+# and audio components from Home Assistant.
+#
+# https://www.home-assistant.io/components/sonos/
+#
+sonos:
+  media_player:
+    hosts:
+      - 10.1.2.111
+      - 10.1.2.112
+      - 10.1.2.113
