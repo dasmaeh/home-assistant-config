@@ -1,0 +1,99 @@
+# I've once created these switches for the use with an AppDaemon dashboard.
+# As I'm currently not using the I've commented them out.
+# The code is left here for future reference
+
+# - platform: template
+#   switches:
+#     sonos_livingroom_play_pause:
+#       value_template: >-
+#         {% if is_state("media_player.livingroom", "playing") %}
+#           on
+#         {% else %}
+#           off
+#         {% endif %}
+#       turn_on:
+#         service: rest_command.sonos_livingroom_play
+#       turn_off:
+#         service: rest_command.sonos_livingroom_pause
+#     sonos_kitchen_play_pause:
+#       value_template: >-
+#         {% if is_state("media_player.kitchen", "playing") %}
+#           on
+#         {% else %}
+#           off
+#         {% endif %}
+#       turn_on:
+#         service: rest_command.sonos_kitchen_play
+#       turn_off:
+#         service: rest_command.sonos_kitchen_pause
+#     sonos_bedroom_play_pause:
+#       value_template: >-
+#         {% if is_state("media_player.bedroom", "playing") %}
+#           on
+#         {% else %}
+#           off
+#         {% endif %}
+#       turn_on:
+#         service: rest_command.sonos_bedroom_play
+#       turn_off:
+#         service: rest_command.sonos_bedroom_pause
+#
+#     sonos_group_all:
+#       friendly_name: "Group all sonos players"
+#       value_template: '{{ is_state("media_player.livingroom", "playing") and is_state("media_player.kitchen", "playing") and is_state("media_player.bedroom", "playing") }}'
+#       turn_on:
+#         service: script.turn_on
+#         data:
+#           entity_id: script.sonos_group_all
+#       turn_off:
+#         service: script.turn_on
+#         data:
+#           entity_id: script.sonos_ungroup_all
+#     sonos_group_livingroom_kitchen:
+#       friendly_name: "Group sonos players in livingroom and kitchen"
+#       value_template: '{{ is_state("media_player.livingroom", "playing") and is_state("media_player.kitchen", "playing") }}'
+#       turn_on:
+#         service: script.turn_on
+#         data:
+#           entity_id: script.sonos_group_livingroom_kitchen
+#       turn_off:
+#         service: script.turn_on
+#         data:
+#           entity_id: script.sonos_ungroup_all
+#           # ungroup all leaves livingroom playing
+#     sonos_group_livingroom_bedroom:
+#       friendly_name: "Group sonos players in  livingroom and bedroom"
+#       value_template: '{{ is_state("media_player.livingroom", "playing") and is_state("media_player.bedroom", "playing") }}'
+#       turn_on:
+#         service: script.turn_on
+#         data:
+#           entity_id: script.sonos_group_livingroom_bedroom
+#       turn_off:
+#         service: script.turn_on
+#         data:
+#           entity_id: script.sonos_ungroup_all
+#           # ungroup_all leaves livingroom playing
+#     sonos_group_kitchen_livingroom:
+#       friendly_name: "Group sonos players in  kitchen and livingroom"
+#       value_template: '{{ is_state("media_player.livingroom", "playing") and is_state("media_player.kitchen", "playing") }}'
+#       turn_on:
+#         service: script.turn_on
+#         data:
+#           entity_id: script.sonos_group_kitchen_livingroom
+#       turn_off:
+#         service: script.turn_on
+#         data:
+#           entity_id: script.sonos_ungroup_kitchen
+#           # ungroup_kitchen leaves kitchen playing
+#     sonos_group_bedroom_livingroom:
+#       friendly_name: "Group sonos players in  bedroom and livingroom"
+#       value_template: '{{ is_state("media_player.livingroom", "playing") and is_state("media_player.bedroom", "playing") }}'
+#       turn_on:
+#         service: script.turn_on
+#         data:
+#           entity_id: script.sonos_group_bedroom_livingroom
+#       turn_off:
+#         service: script.turn_on
+#         data:
+#           entity_id: script.sonos_ungroup_bedroom
+#           # ungroup_bedroom leaves bedroom playing

@@ -1,0 +1,64 @@
+# I had created these commands for the use with an appdaemon dashboard.
+# As I'm currently not using them, I've commented them out.
+# The code is left here for future reference.
+
+#
+# ## Group players
+# # Kitchen + Bedroom
+# sonos_kitchen_group_bedroom:
+#   url: 'http://10.1.0.21:5005/bedroom/join/kitchen'
+# # Livingroom + Kitchen
+# sonos_livingroom_group_kitchen:
+#   url: 'http://10.1.0.21:5005/kitchen/join/livingroom'
+# # Livingroom + Bedroom
+# sonos_livingroom_group_bedroom:
+#   url: 'http://10.1.0.21:5005/bedroom/join/livingroom'
+# # Livingroom + Kitchen
+# sonos_kitchen_group_livingroom:
+#   url: 'http://10.1.0.21:5005/livingroom/join/kitchen'
+# # Livingroom + Bedroom
+# sonos_bedroom_group_livingroom:
+#   url: 'http://10.1.0.21:5005/livingroom/join/bedroom'
+# ## Ungroup players
+# sonos_livingroom_ungroup:
+#   url: 'http://10.1.0.21:5005/livingroom/leave'
+# sonos_kitchen_ungroup:
+#   url: 'http://10.1.0.21:5005/kitchen/leave'
+# sonos_bedroom_ungroup:
+#   url: 'http://10.1.0.21:5005/bedroom/leave'
+# ## Play / pause
+# sonos_livingroom_play:
+#   url: 'http://10.1.0.21:5005/livingroom/play'
+# sonos_livingroom_pause:
+#   url: 'http://10.1.0.21:5005/livingroom/pause'
+# ## Play / pause
+# sonos_kitchen_play:
+#   url: 'http://10.1.0.21:5005/kitchen/play'
+# sonos_kitchen_pause:
+#   url: 'http://10.1.0.21:5005/kitchen/pause'
+# ## Play / pause
+# sonos_bedroom_play:
+#   url: 'http://10.1.0.21:5005/bedroom/play'
+# sonos_bedroom_pause:
+#   url: 'http://10.1.0.21:5005/bedroom/pause'
+# ## Previous/Next
+# sonos_livingroom_previous:
+#   url: 'http://10.1.0.21:5005/livingroom/previous'
+# sonos_livingroom_next:
+#  url: 'http://10.1.0.21:5005/livingroom/next'
+# sonos_kitchen_previous:
+#   url: 'http://10.1.0.21:5005/kitchen/previous'
+# sonos_kitchen_next:
+#  url: 'http://10.1.0.21:5005/kitchen/next'
+# sonos_bedroom_previous:
+#   url: 'http://10.1.0.21:5005/bedroom/previous'
+# sonos_bedroom_next:
+#  url: 'http://10.1.0.21:5005/bedroom/next'
+# ## Volume
+# # default volumes
+# sonos_livingroom_volume_default:
+#   url: 'http://10.1.0.21:5005/livingroom/volume/10'
+# sonos_kitchen_volume_default:
+#   url: 'http://10.1.0.21:5005/kitchen/volume/10'
+# sonos_bedrooum_volume_default:
+#   url: 'http://10.1.0.21:5005/bedroom/volume/10'

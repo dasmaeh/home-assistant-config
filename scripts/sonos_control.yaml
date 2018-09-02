@@ -1,0 +1,106 @@
+# I had created these scripts for the use with an appdaemon dashboard.
+# As I'm currently not using them, I've commented them out.
+# The code is left here for future reference.
+#
+# # Some scripts to control my sonos speakers from an AppDaemon dashboard
+# # Todo: Translate the aliases
+#
+# sonos_group_all:
+#   alias: "Group all Sonos speakers"
+#   sequence:
+#     - service: rest_command.sonos_livingroom_group_kitchen
+#     - service: rest_command.sonos_livingroom_group_bedroom
+#     - service: rest_command.sonos_livingroom_play
+# # Ungrouping all, will cause all players to stop!
+# sonos_ungroup_all:
+#   alias: Ungroup all
+#   sequence:
+#     #- service: rest_command.sonos_livingroom_ungroup
+#     #- service: rest_command.sonos_livingoom_pause
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_bedroom_ungroup
+# sonos_group_livingroom_kitchen:
+#   alias: "Group Sonos speakers in livingroom and kitchen"
+#   sequence:
+#     - service: rest_command.sonos_livingroom_group_kitchen
+#     - service: rest_command.sonos_livingroom_play
+# sonos_group_livingroom_bedroom:
+#   alias: "Group Sonos speakers in livingroom and bedroom"
+#   sequence:
+#     - service: rest_command.sonos_livingroom_group_bedroom
+#     - service: rest_command.sonos_livingroom_play
+# sonos_group_bedroom_livingroom:
+#   alias: "Group Sonos speakers in bedroom and livingroom"
+#   sequence:
+#     - service: rest_command.sonos_bedroom_group_livingroom
+#     - service: rest_command.sonos_bedroom_play
+# sonos_group_kitchen_livingroom:
+#   alias: "Group Sonos speakers in  kitchen and livingroom"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_group_livingroom
+#     - service: rest_command.sonos_kitchen_play
+# sonos_ungroup_kitchen:
+#   alias: "Ungroup all Sonos speakers from kitchen"
+#   sequence:
+#     - service: rest_command.sonos_livingroom_ungroup
+#     - service: rest_command.sonos_bedroom_ungroup
+# sonos_ungroup_bedroom:
+#   alias: "Ungroup all Sonos speakers from bedroom"
+#   sequence:
+#     - service: rest_command.sonos_livingroom_ungroup
+#     - service: rest_command.sonos_kitchen_ungroup
+# sonos_livingroom_volume_default:
+#   alias: "Set default volume (livingroom)"
+#   sequence:
+#     - service: media_player.volume_set
+#       entity_id: media_player.livingroom
+#       data:
+#         volume_level: 0.10
+# sonos_kitchen_volume_default:
+#   alias: "Set default volume (kitchen)"
+#   sequence:
+#     - service: media_player.volume_set
+#       entity_id: media_player.kitchen
+#       data:
+#         volume_level: 0.10
+# sonos_bedroom_volume_default:
+#   alias: "Set default volume (bedroom)"
+#   sequence:
+#     - service: media_player.volume_set
+#       entity_id: media_player.bedroom
+#       data:
+#         volume_level: 0.10
+# sonos_flat_volume_default:
+#   alias: "Set default volume (all)"
+#   sequence:
+#     - service: media_player.volume_set
+#       entity_id:
+#         - media_player.livingroom
+#         - media_player.kitchen
+#         - media_player.bedroom
+#       data:
+#         volume_level: 0.10
+# sonos_livingroom_previous:
+#   alias: "Play previous track (livingroom)"
+#   sequence:
+#     - service: rest_command.sonos_livingroom_previous
+# sonos_livingroom_next:
+#   alias: "Play next track (livingroom)"
+#   sequence:
+#     - service: rest_command.sonos_livingroom_next
+# sonos_kitchen_previous:
+#   alias: "Play previous track (kitchen)"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_previous
+# sonos_kitchen_next:
+#   alias: "Play next track (kitchen)"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_next
+# sonos_bedroom_previous:
+#   alias: "Play previous track (bedroom)"
+#   sequence:
+#     - service: rest_command.sonos_bedroom_previous
+# sonos_bedroom_next:
+#   alias: "Play next track (bedroom)"
+#   sequence:
+#     - service: rest_command.sonos_bedroom_next

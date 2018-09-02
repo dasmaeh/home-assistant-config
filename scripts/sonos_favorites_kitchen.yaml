@@ -1,0 +1,129 @@
+# I had created these scripts for the use with an appdaemon dashboard.
+# As I'm currently not using them, I've commented them out.
+# The code is left here for future reference.
+
+# #################################### FLAT ####################################
+# sonos_flat_play_swr3:
+#   alias: "Play SWR3 everywhere"
+#   sequence:
+#     - service: script.turn_on
+#       entity_id:
+#         - script.sonos_flat_volume_default
+#         - script.sonos_group_all
+#     - service: rest_command.sonos_livingroom_play_swr3
+# ################################# LIVINGROOM #################################
+# sonos_livingroom_play_swr3:
+#   alias: "Play SWR3 in livingroom"
+#   sequence:
+#     - service: rest_command.sonos_livingroom_ungroup
+#     - service: rest_command.sonos_livingroom_volume_default
+#     - service: rest_command.sonos_livingroom_play_swr3
+# ################################## BEDROOM ###################################
+# sonos_bedroom_play_swr3:
+#   alias: "Play SWR3 in bedroom"
+#   sequence:
+#     - service: rest_command.sonos_bedroom_ungroup
+#     - service: rest_command.sonos_bedroom_volume_default
+#     - service: rest_command.sonos_bedroom_play_swr3
+# ################################### KITCHEN ##################################
+# # Breakfast
+# sonos_kitchen_play_sundaymorning:
+#   alias: "Play Sunday Morning in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_sundaymorning
+# sonos_kitchen_play_classicalbreakfast:
+#   alias: "Play Classical Breakfast in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_classicalbreakfast
+# # Cooking
+# sonos_kitchen_play_cookingtonight:
+#   alias: "Play Cooking Tonight in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_cookingtonight
+# sonos_kitchen_play_cuisinerenmusique:
+#   alias: "Play Cuisiner En Musique in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_cuisinerenmusique
+# sonos_kitchen_play_cuisinerenmusiqueherve:
+#   alias: "Play Cuisiner En Musique (Herve) in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_cuisinerenmusiqueherve
+# sonos_kitchen_play_letscook:
+#   alias: "Play Let's Cook in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_letscook
+# # Dinner
+# sonos_kitchen_play_classicaldinner:
+#   alias: "Play Classical Dinner in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_classicaldinner
+# sonos_kitchen_play_dinerentreamis:
+#   alias: "Play Diner Entre Amis in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_dinerentreamis
+# sonos_kitchen_play_dinerreussi:
+#   alias: "Play Diner Reussi in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_dinerreussi
+# sonos_kitchen_play_dinerromantique:
+#   alias: "Play Diner Romantique in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_dinerromantique
+# sonos_kitchen_play_dinnerwithfriends:
+#   alias: "Play Dinner With Friends in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_dinnerwithfriends
+# sonos_kitchen_play_etentjemetvrienden:
+#   alias: "Play Etentje met Vrienden in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_etentjemetvrienden
+# sonos_kitchen_play_jazzydinner:
+#   alias: "Play Jazzy Dinner in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_jazzydinner
+# sonos_kitchen_play_repasenfamille:
+#   alias: "Play Repas En Famille in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_repasenfamille
+# # Cleaning
+# sonos_kitchen_play_motivationmenage:
+#   alias: "Play Motivation Pour La Menage in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_motivationmenage
+# # Radio
+# sonos_kitchen_play_swr3:
+#   alias: "Play SWR3 in kitchen"
+#   sequence:
+#     - service: rest_command.sonos_kitchen_ungroup
+#     - service: rest_command.sonos_kitchen_volume_default
+#     - service: rest_command.sonos_kitchen_play_swr3

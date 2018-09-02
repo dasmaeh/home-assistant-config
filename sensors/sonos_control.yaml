@@ -1,0 +1,148 @@
+# I've once created these sensor for the use with an AppDaemon dashboard.
+# As I'm currently not using the I've commented them out.
+# The code is left here for future reference
+
+#  - platform: template
+#    sensors:
+############################## Playing now sensors #############################
+#      sonos_flat_playing:
+#        value_template: >-
+#          {% if is_state("media_player.livingroom", "playing") %}
+#            {{ states.sensor.sonos_livingroom_playing.state }}
+#          {% elif is_state("media_player.kitchen", "playing") %}
+#            {{ states.sensor.sonos_kitchen_playing.state }}
+#          {% elif is_state("media_player.bedroom", "playing") %}
+#            {{ states.sensor.sonos_bedroom_playing.state }}
+#          {% else %}
+#            Nichts
+#          {% endif %}
+#      sonos_livingroom_playing:
+#        value_template: >-
+#          {% if is_state("media_player.livingroom", "playing") %}
+#            {% if states.sensor.sonos_livingroom_state.attributes.currentTrack['type'] == 'radio' %}
+#              Radio: {{ states.sensor.sonos_livingroom_state.attributes.currentTrack['stationName'] }}
+#            {% else %}
+#              {{ states.sensor.sonos_livingroom_state.attributes.currentTrack['title'] }} <br /> {{ states.sensor.sonos_livingroom_state.attributes.currentTrack['artist'] }}
+#            {% endif %}
+#          {% else %}
+#            Nichts
+#          {% endif %}
+#      sonos_kitchen_playing:
+#        value_template: >-
+#          {% if is_state("media_player.kitchen", "playing") %}
+#            {% if states.sensor.sonos_kitchen_state.attributes.currentTrack['type'] == 'radio' %}
+#              Radio: {{ states.sensor.sonos_kitchen_state.attributes.currentTrack['stationName'] }}
+#            {% else %}
+#              {{ states.sensor.sonos_kitchen_state.attributes.currentTrack['title'] }} <br /> {{ states.sensor.sonos_kitchen_state.attributes.currentTrack['artist'] }}
+#            {% endif %}
+#          {% else %}
+#            Nichts
+#          {% endif %}
+#      sonos_bedroom_playing:
+#        value_template: >-
+#          {% if is_state("media_player.bedroom", "playing") %}
+#            {% if states.sensor.sonos_bedroom_state.attributes.currentTrack['type'] == 'radio' %}
+#              Radio: {{ states.sensor.sonos_bedroom_state.attributes.currentTrack['stationName'] }}
+#            {% else %}
+#              {{ states.sensor.sonos_bedroom_state.attributes.currentTrack['title'] }} <br /> {{ states.sensor.sonos_bedroom_state.attributes.currentTrack['artist'] }}
+#            {% endif %}
+#          {% else %}
+#            Nichts
+#          {% endif %}
+############################# Playing next sensors #############################
+#      sonos_flat_playing_next:
+#        value_template: >-
+#          {% if is_state("media_player.livingroom", "playing") %}
+#            {{ states.sensor.sonos_livingroom_playing_next.state }}
+#          {% elif is_state("media_player.kitchen", "playing") %}
+#            {{ states.sensor.sonos_kitchen_playing_next.state }}
+#          {% elif is_state("media_player.bedroom", "playing") %}
+#            {{ states.sensor.sonos_bedroom_playing_next.state }}
+#          {% else %}
+#            Nichts
+#          {% endif %}
+#      sonos_livingroom_playing_next:
+#        value_template: >-
+#          {% if is_state("media_player.livingroom", "playing") %}
+#            {% if states.sensor.sonos_livingroom_state.attributes.nextTrack['type'] == 'radio' %}
+#              Radio: {{ states.sensor.sonos_livingroom_state.attributes.nextTrack['stationName'] }}
+#            {% else %}
+#              {{ states.sensor.sonos_livingroom_state.attributes.nextTrack['title'] }} <br /> {{ states.sensor.sonos_livingroom_state.attributes.nextTrack['artist'] }}
+#            {% endif %}
+#          {% else %}
+#            Nichts
+#          {% endif %}
+#      sonos_kitchen_playing_next:
+#        value_template: >-
+#          {% if is_state("media_player.kitchen", "playing") %}
+#            {% if states.sensor.sonos_kitchen_state.attributes.nextTrack['type'] == 'radio' %}
+#              Radio: {{ states.sensor.sonos_kitchen_state.attributes.nextTrack['stationName'] }}
+#            {% else %}
+#              {{ states.sensor.sonos_kitchen_state.attributes.nextTrack['title'] }} <br /> {{ states.sensor.sonos_kitchen_state.attributes.nextTrack['artist'] }}
+#            {% endif %}
+#          {% else %}
+#            Nichts
+#          {% endif %}
+#      sonos_bedroom_playing_next:
+#        value_template: >-
+#          {% if is_state("media_player.bedroom", "playing") %}
+#            {% if states.sensor.sonos_bedroom_state.attributes.nextTrack['type'] == 'radio' %}
+#              Radio: {{ states.sensor.sonos_bedroom_state.attributes.nextTrack['stationName'] }}
+#            {% else %}
+#              {{ states.sensor.sonos_bedroom_state.attributes.nextTrack['title'] }} <br /> {{ states.sensor.sonos_bedroom_state.attributes.nextTrack['artist'] }}
+#            {% endif %}
+#          {% else %}
+#            Nichts
+#          {% endif %}
+#
+################################ State sensors #################################
+#  - platform: rest
+#    name: sonos_livingroom_state
+#    resource: http://10.1.0.21:5005/livingroom/state
+#    value_template: >-
+#      {% if value_json.volume != '' %}
+#        OK
+#      {% else %}
+#        n/a
+#      {%endif %}
+#    json_attributes:
+#      - volume
+#      - currentTrack
+#      - nextTrack
+#  - platform: rest
+#    name: sonos_kitchen_state
+#    resource: http://10.1.0.21:5005/kitchen/state
+#    value_template: >-
+#      {% if value_json.volume != '' %}
+#        OK
+#      {% else %}
+#        n/a
+#      {%endif %}
+#    json_attributes:
+#      - volume
+#      - currentTrack
+#      - nextTrack
+#  - platform: rest
+#    name: sonos_bedroom_state
+#    resource: http://10.1.0.21:5005/bedroom/state
+#    value_template: >-
+#      {% if value_json.volume != '' %}
+#        OK
+#      {% else %}
+#        n/a
+#      {%endif %}
+#    json_attributes:
+#      - volume
+#      - currentTrack
+#      - nextTrack
+#  - platform: rest
+#    name: sonos_group_state
+#    resource: http://10.1.0.21:5005/zones
+#    value_template: >-
+#      {% if value_json[0].uuid %}
+#        OK
+#      {% else %}
+#        n/a
+#      {% endif %}
+#    json_attributes:
+#      - [0]

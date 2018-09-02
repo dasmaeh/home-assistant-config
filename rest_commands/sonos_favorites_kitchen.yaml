@@ -1,0 +1,52 @@
+# I had created these commands for the use with an appdaemon dashboard.
+# As I'm currently not using them, I've commented them out.
+# The code is left here for future reference.
+
+#
+# #################################### FLAT ####################################
+# ################################### BEDROOM ##################################
+# sonos_bedroom_play_swr3:
+#   url: 'http://10.1.0.21:5005/bedroom/favorite/swr3'
+# ################################# LIVINGROOM #################################
+# sonos_livingroom_play_swr3:
+#   url: 'http://10.1.0.21:5005/livingroom/favorite/swr3'
+# ################################## KITCHEN ###################################
+# # Breakfast
+# sonos_kitchen_play_classicalbreakfast:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/Classical%20Breakfast'
+# sonos_kitchen_play_smellslikecoffee:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/Smells%20Like%20Coffee'
+# sonos_kitchen_play_sundaymorning:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/sunday%20morning'
+# # Cooking
+# sonos_kitchen_play_cookingtonight:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/cooking%20tonight'
+# sonos_kitchen_play_cuisinerenmusique:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/cuisiner%20en%20musique'
+# sonos_kitchen_play_cuisinerenmusiqueherve:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/cuisiner%20en%20musique%20par%20herve%20Cuisine'
+# sonos_kitchen_play_letscook:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/let%27s%20cook%21'
+# # Dinner
+# sonos_kitchen_play_classicaldinner:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/classical%20dinner'
+# sonos_kitchen_play_dinerentreamis:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/D%C3%AEner%20entre%20amis'
+# sonos_kitchen_play_dinerreussi:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/D%C3%AEner%20r%C3%A9ussi'
+# sonos_kitchen_play_dinerromantique:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/D%C3%AEner%20romantique'
+# sonos_kitchen_play_dinnerwithfriends:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/Dinner%20With%20Friends'
+# sonos_kitchen_play_etentjemetvrienden:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/Etentje%20met%20Vrienden'
+# sonos_kitchen_play_jazzydinner:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/Jazzy%20Dinner'
+# sonos_kitchen_play_repasenfamille:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/Repas%20en%20Famille%20%2F%20Polo%26Pan%2C%20Louane%2CLana%20Del%20Rey..'
+# # Cleaning
+# sonos_kitchen_play_motivationmenage:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/motivation%20pour%20la%20menage'
+# # Radio
+# sonos_kitchen_play_swr3:
+#   url: 'http://10.1.0.21:5005/kitchen/favorite/swr3'
