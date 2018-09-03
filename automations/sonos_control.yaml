@@ -1,0 +1,73 @@
+# I had created these automations for the use with an appdaemon dashboard.
+# As I'm currently not using them, I've commented them out.
+# The code is left here for future reference.
+
+#
+# # Some automations to control sonos speakers from an AppDaemon dashboard
+# # Todo: Translate the aliases
+#   - id: sonos_volume_kitchen
+#     alias: Sonos Volume - Kitchen
+#     trigger:
+#       - platform: state
+#         entity_id: input_number.sonos_kitchen_volume
+#     action:
+#       - service: media_player.volume_set
+#         entity_id: media_player.kitchen
+#         data_template:
+#           volume_level: '{{ float(trigger.to_state.state)/100 }}'
+#
+#   - id: sonos_volume_bedroom
+#     alias: Sonos Volume - Bedroom
+#     trigger:
+#       - platform: state
+#         entity_id: input_number.sonos_bedroom_volume
+#     action:
+#       - service: media_player.volume_set
+#         entity_id: media_player.bedroom
+#         data_template:
+#           volume_level: '{{ float(trigger.to_state.state)/100 }}'
+#
+#   - id: sonos_volume_livingroom
+#     alias: Sonos Volume - Living room
+#     trigger:
+#       - platform: state
+#         entity_id: input_number.sonos_livingroom_volume
+#     action:
+#       - service: media_player.volume_set
+#         entity_id: media_player.livingroom
+#         data_template:
+#           volume_level: '{{ float(trigger.to_state.state) / 100 }}'
+#
+#   # set input_number when volume changes elsewhere
+#   - id: sonos_volume_set_kitchen_slider
+#     alias: Sonos Volume - Set kitchen slider
+#     trigger:
+#       - platform: state
+#         entity_id: media_player.kitchen
+#     action:
+#       - service: input_number.set_value
+#         data_template:
+#           entity_id: input_number.sonos_kitchen_volume
+#           value: '{{ states.media_player.kitchen.attributes.volume_level * 100 | int }}'
+#
+#   - id: sonos_volume_set_bedroom_slider
+#     alias: Sonos Volume - Set bedroom slider
+#     trigger:
+#       - platform: state
+#         entity_id: media_player.bedroom
+#     action:
+#       - service: input_number.set_value
+#         data_template:
+#           entity_id: input_number.sonos_bedroom_volume
+#           value: '{{ states.media_player.bedroom.attributes.volume_level * 100 | int }}'
+#
+#   - id: sonos_volume_set_livingroom_slider
+#     alias: Sonos Volume - Set living room slider
+#     trigger:
+#       platform: state
+#       entity_id: media_player.livingroom
+#     action:
+#       - service: input_number.set_value
+#         data_template:
+#           entity_id: input_number.sonos_livingroom_volume
+#           value: '{{ states.media_player.livingroom.attributes.volume_level * 100 | int }}'

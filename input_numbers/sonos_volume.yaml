@@ -1,0 +1,22 @@
+# I had created these inputs for the use with an appdaemon dashboard.
+# As I'm currently not using them, I've commented them out.
+# The code is left here for future reference.
+
+#sonos_livingroom_volume:
+#   name: Livingroom
+#   initial: 20
+#   min: 0
+#   max: 100
+#   step: 5
+# sonos_kitchen_volume:
+#   name: Kitchen
+#   initial: 20
+#   min: 0
+#   max: 100
+#   step: 5
+# sonos_bedroom_volume:
+#   name: Bedroom
+#   initial: 20
+#   min: 0
+#   max: 100
+#   step: 5
