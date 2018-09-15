@@ -1,0 +1,20 @@
+---
+# Interacts with media players on your network.
+#
+# https://www.home-assistant.io/components/media_player/
+#
+media_player:
+# Platform: Amazon firetv
+# The firetv platform allows you to control a Amazon Fire TV/stick.
+# (needs firetv-server)
+#
+# (https://www.home-assistant.io/components/media_player.firetv/)
+#
+# Using custom component for firetv as firetvs running Android K need key based authentication...
+#
+# https://github.com/JeffLIrion/homeassistant_native_firetv
+#
+  - platform: firetv
+    name: FireTV
+    host: !secret firetv_livingroom
+    adbkey: "/config/.storage/adbkey"
