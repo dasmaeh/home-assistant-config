@@ -2,3 +2,6 @@
 	path = www/custom-lovelace
 	url = https://github.com/ciotlosm/custom-lovelace.git
 	branch = master
+[submodule "custom_components/homeassistant_native_firetv"]
+	path = custom_components/homeassistant_native_firetv
+	url = https://github.com/JeffLIrion/homeassistant_native_firetv.git
