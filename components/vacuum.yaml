@@ -1,0 +1,9 @@
+# The vacuum component enables the ability to control home cleaning robots within Home Assistant.
+# The roomba component allows you to control your iRobot Roomba vacuum.
+# https://www.home-assistant.io/components/vacuum.roomba/
+
+vacuum:
+  - platform: roomba
+    host: !secret roomba_ip
+    username: !secret roomba_blid
+    password: !secret roomba_passwd
