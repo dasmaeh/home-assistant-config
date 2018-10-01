@@ -1,0 +1,17 @@
+---
+# An input_select to choose the time of day.
+# This gets done by automations, so we can use the english lowercase names here
+# and use this directly in automations
+# (background: I'm using German names in frontend and english in automations
+# for internatinal readability wherever possibel. Eg: ids are in English,
+# friendly_names in German)
+
+time_of_day:
+  name: "Tageszeit"
+  options:
+    - morning
+    - day
+    - dawn
+    - evening
+    - late
+    - night

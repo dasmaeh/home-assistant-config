@@ -1,0 +1,28 @@
+# Sensor to detect, wether today is a workday
+# https://www.home-assistant.io/components/binary_sensor.workday
+- platform: workday
+#  name: workday_today
+  country: DE
+  province: BW
+# Sensor to detect, wether tomorrow is a workday
+# https://www.home-assistant.io/components/binary_sensor.workday
+- platform: workday
+  name: workday_tomorrow
+  country: DE
+  province: BW
+  days_offset: 1
+# Template sensor to determine wether it's workday, weekend or holiday
+# Not sure if or why I need this.
+- platform: template
+  sensors:
+    weekend_sensor:
+      friendly_name: Wochenende
+      value_template: >-
+        {% if now().weekday() == 5 or now().weekday() == 6 %}
+          True
+        {% else %}
+          False
+        {% endif %}
+    holiday_sensor:
+      friendly_name: Feiertag
+      value_template: "{{ is_state('binary_sensor.weekday_sensor', 'off') and is_state('binary_sensor.weekend_sensor', 'off') }}"

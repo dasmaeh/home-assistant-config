@@ -1,0 +1,44 @@
+# Some automations to set the time of day according to sunrise, sunset and
+# bed occupancy.
+- id: datetime_set_time_of_day
+  alias: "[Time of day] Set time of day"
+  trigger:
+    # Set on (re)start
+    - platform: homeassistant
+      event: start
+    # Run checks every 5 minutes
+    - platform: time
+      minutes: '/5'
+      seconds: 00
+  action:
+    service: input_select.select_option
+    data_template:
+      entity_id: input_select.time_of_day
+      option: >-
+        {% if now().hour < 12 %}
+          {% if states.sun.sun.attributes.elevation < -4 %}
+            {% if is_state("binary_sensor.bed_everybody", "on") %}
+              Nacht
+            {% else %}
+              Spätabend
+            {% endif %}
+          {% else %}
+            {% if states.sun.sun.attributes.elevation < 3 %}
+              Morgen
+            {% else %}
+              Tag
+            {% endif %}
+          {% endif %}
+        {% else %}
+          {% if is_state("binary_sensor.bed_everybody", "on") %}
+            Nacht
+          {% elif (now().hour == 22 and now().minute >= 30) or now().hour > 22 %}
+            Spätabend
+          {% elif states.sun.sun.attributes.elevation < -2 %}
+            Abend
+          {% elif states.sun.sun.attributes.elevation < 4 %}
+            Vorabend
+          {% else %}
+            Tag
+          {% endif %}
+        {% endif %}

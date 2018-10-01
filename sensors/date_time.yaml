@@ -1,0 +1,74 @@
+---
+# Several sensor to handle date and time,
+# season and time of day.
+# TODO: definitely nneds more documentation
+- platform: template
+  sensors:
+      time_of_day_prog:
+        value_template: '{{ states.input_select.time_of_day.state }}'
+        entity_id: input_select.time_of_day
+      time_of_day:
+        friendly_name: Tageszeit
+        value_template: >-
+          {% if states.input_select.time_of_day.state == 'Morgen' %}
+            morning
+          {% elif states.input_select.time_of_day.state == 'Tag' %}
+            day
+          {% elif states.input_select.time_of_day.state == 'Vorabend' %}
+            dawn
+          {% elif states.input_select.time_of_day.state == 'Abend' %}
+            evening
+          {% elif states.input_select.time_of_day.state == 'Spätabend' %}
+            late
+          {% elif states.input_select.time_of_day.state == 'Nacht' %}
+            night
+          {% else %}
+            day
+          {% endif %}
+        entity_id: input_select.time_of_day
+        icon_template: >-
+          {% if states.input_select.time_of_day.state == 'Morgen' %}
+            mdi:sunset-up
+          {% elif states.input_select.time_of_day.state == 'Tag' %}
+            mdi:weather-sunny
+          {% elif states.input_select.time_of_day.state == 'Vorabend' %}
+            mdi:sunset-down
+          {% elif states.input_select.time_of_day.state == 'Abend' %}
+            mdi:sunset
+          {% elif states.input_select.time_of_day.state == 'Spätabend' %}
+            mdi:night
+          {% elif states.input_select.time_of_day.state == 'Nacht' %}
+            mdi:night
+          {% else %}
+            mdi:weather-sunny
+          {% endif %}
+      type_of_day:
+        friendly_name: ""
+        #icon: mdi:calendar-range
+        icon_template: >-
+          {% if is_state('binary_sensor.workday_sensor', 'on') %}
+            mdi:briefcase
+          {% elif is_state('binary_sensor.weekend_sensor', 'on') %}
+            mdi:beer
+          {% else %}
+            mdi:star-face
+          {% endif %}
+        value_template: >-
+          {% if is_state('binary_sensor.workday_sensor', 'on') %}
+            Werktag
+          {% elif is_state('binary_sensor.weekend_sensor', 'on') %}
+            Wochenende
+          {% else %}
+            Feiertag
+          {% endif %}
+#    time_of_year:
+#      value_template: '{{ states.input_select.time_of_year.state }}'
+#      friendly_name: 'Jahrezeit'
+#      icon: mdi:calendar
+#      entity_id: input_select.time_of_year
+- platform: season
+  type: astronomical
+- platform: time_date
+  display_options:
+      - 'date'
+      - 'time'

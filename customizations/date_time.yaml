@@ -1,0 +1,27 @@
+# Some customizations for date and time sensors, Mainly changing (translating) names.
+sensor.time:
+  friendly_name: Zeit
+sensor.date:
+  friendly_name: Datum
+sensor.season:
+  friendly_name: Jahreszeit
+  icon: mdi:calendar-blank
+sensor.time_of_day:
+  friendly_name: Tageszeit
+sensor.time_of_day_prog:
+  friendly_name: Tageszeit (dev)
+  icon: mdi:weather-sunset
+sensor.type_of_day:
+  friendly_name: "Heute"
+  icon: mdi:calendar-range
+binary_sensor.workday_sensor:
+  friendly_name: Arbeitstag?
+  icon: mdi:calendar-range
+binary_sensor.workday_tomorrow:
+  friendly_name: Morgen Arbeitstag?
+  icon: mdi:calendar-range
+# Not really date or time sensors, but create an own file for them?
+sensor.moon:
+  friendly_name: Mond
+sun.sun:
+  friendly_name: Sonne
