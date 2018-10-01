@@ -18,27 +18,27 @@
         {% if now().hour < 12 %}
           {% if states.sun.sun.attributes.elevation < -4 %}
             {% if is_state("binary_sensor.bed_everybody", "on") %}
-              Nacht
+              night
             {% else %}
-              Spätabend
+              late
             {% endif %}
           {% else %}
             {% if states.sun.sun.attributes.elevation < 3 %}
-              Morgen
+              morning
             {% else %}
-              Tag
+              day
             {% endif %}
           {% endif %}
         {% else %}
           {% if is_state("binary_sensor.bed_everybody", "on") %}
-            Nacht
+            night
           {% elif (now().hour == 22 and now().minute >= 30) or now().hour > 22 %}
-            Spätabend
+            late
           {% elif states.sun.sun.attributes.elevation < -2 %}
-            Abend
+            evening
           {% elif states.sun.sun.attributes.elevation < 4 %}
-            Vorabend
+            dawn
           {% else %}
-            Tag
+            day
           {% endif %}
         {% endif %}

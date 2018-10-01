@@ -10,34 +10,34 @@
       time_of_day:
         friendly_name: Tageszeit
         value_template: >-
-          {% if states.input_select.time_of_day.state == 'Morgen' %}
-            morning
-          {% elif states.input_select.time_of_day.state == 'Tag' %}
-            day
-          {% elif states.input_select.time_of_day.state == 'Vorabend' %}
-            dawn
-          {% elif states.input_select.time_of_day.state == 'Abend' %}
-            evening
-          {% elif states.input_select.time_of_day.state == 'Spätabend' %}
-            late
-          {% elif states.input_select.time_of_day.state == 'Nacht' %}
-            night
+          {% if states.input_select.time_of_day.state == 'morning' %}
+            Morgen
+          {% elif states.input_select.time_of_day.state == 'day' %}
+            Tag
+          {% elif states.input_select.time_of_day.state == 'dawn' %}
+            Vorabend
+          {% elif states.input_select.time_of_day.state == 'evening' %}
+            Abend
+          {% elif states.input_select.time_of_day.state == 'late' %}
+            Spätabend
+          {% elif states.input_select.time_of_day.state == 'night' %}
+            Nacht
           {% else %}
-            day
+            Tag
           {% endif %}
         entity_id: input_select.time_of_day
         icon_template: >-
-          {% if states.input_select.time_of_day.state == 'Morgen' %}
+          {% if states.input_select.time_of_day.state == 'morning' %}
             mdi:sunset-up
-          {% elif states.input_select.time_of_day.state == 'Tag' %}
+          {% elif states.input_select.time_of_day.state == 'day' %}
             mdi:weather-sunny
-          {% elif states.input_select.time_of_day.state == 'Vorabend' %}
+          {% elif states.input_select.time_of_day.state == 'dawn' %}
             mdi:sunset-down
-          {% elif states.input_select.time_of_day.state == 'Abend' %}
+          {% elif states.input_select.time_of_day.state == 'evening' %}
             mdi:sunset
-          {% elif states.input_select.time_of_day.state == 'Spätabend' %}
+          {% elif states.input_select.time_of_day.state == 'late' %}
             mdi:night
-          {% elif states.input_select.time_of_day.state == 'Nacht' %}
+          {% elif states.input_select.time_of_day.state == 'night' %}
             mdi:night
           {% else %}
             mdi:weather-sunny
