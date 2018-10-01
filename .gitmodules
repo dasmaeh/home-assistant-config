@@ -1,7 +1,39 @@
-[submodule "www/custom-lovelace"]
-	path = www/custom-lovelace
+[submodule "www/custom_cards/custom-lovelace"]
+	path = www/custom_cards/custom-lovelace
 	url = https://github.com/ciotlosm/custom-lovelace.git
-	branch = master
-[submodule "custom_components/homeassistant_native_firetv"]
-	path = custom_components/homeassistant_native_firetv
-	url = https://github.com/JeffLIrion/homeassistant_native_firetv.git
+[submodule "www/custom_cards/lovelace-column-card"]
+	path = www/custom_cards/lovelace-column-card
+	url = https://github.com/thomasloven/lovelace-column-card.git
+[submodule "www/custom_cards/homeassistant-lovelace-gen"]
+	path = www/custom_cards/homeassistant-lovelace-gen
+	url = https://github.com/thomasloven/homeassistant-lovelace-gen.git
+[submodule "www/custom_cards/lovelace-color-glance-card"]
+	path = www/custom_cards/lovelace-color-glance-card
+	url = https://github.com/thomasloven/lovelace-color-glance-card.git
+[submodule "www/custom_cards/lovelace-useful-markdown-card"]
+	path = www/custom_cards/lovelace-useful-markdown-card
+	url = https://github.com/thomasloven/lovelace-useful-markdown-card.git
+[submodule "www/custom_cards/lovelace-player"]
+	path = www/custom_cards/lovelace-player
+	url = https://github.com/thomasloven/lovelace-player.git
+[submodule "www/custom_cards/lovelace-fullykiosk"]
+	path = www/custom_cards/lovelace-fullykiosk
+	url = https://github.com/thomasloven/lovelace-fullykiosk.git
+[submodule "www/custom_cards/lovelace-slider-entity-row"]
+	path = www/custom_cards/lovelace-slider-entity-row
+	url = https://github.com/thomasloven/lovelace-slider-entity-row.git
+[submodule "www/custom_cards/lovelace-toggle-lock-entity-row"]
+	path = www/custom_cards/lovelace-toggle-lock-entity-row
+	url = https://github.com/thomasloven/lovelace-toggle-lock-entity-row.git
+[submodule "www/custom_cards/lovelace-time-input-row"]
+	path = www/custom_cards/lovelace-time-input-row
+	url = https://github.com/thomasloven/lovelace-time-input-row.git
+[submodule "www/custom_cards/lovelace-folding-group-entity-row"]
+	path = www/custom_cards/lovelace-folding-group-entity-row
+	url = https://github.com/thomasloven/lovelace-folding-group-entity-row.git
+[submodule "www/custom_cards/lovelace-long-press"]
+	path = www/custom_cards/lovelace-long-press
+	url = https://github.com/thomasloven/lovelace-long-press.git
+[submodule "www/custom_cards/lovelace-card-modder"]
+	path = www/custom_cards/lovelace-card-modder
+	url = https://github.com/thomasloven/lovelace-card-modder.git
